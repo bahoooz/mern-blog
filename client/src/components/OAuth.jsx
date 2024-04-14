@@ -30,6 +30,9 @@ export default function OAuth() {
         navigate("/")
       }
     } catch (error) {
+      if (error.code === "auth/the-service-is-currently-unavailable") {
+        console.log('Le service Firebase Auth est actuellement indisponible. Veuillez réessayer plus tard.');
+      }
       console.log(error);
     }
   };
