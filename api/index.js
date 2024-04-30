@@ -7,6 +7,7 @@ import postRoutes from "./routes/post.route.js";
 import commentRoutes from "./routes/comment.route.js";
 import cookieParser from "cookie-parser";
 import path from "path";
+import cors from "cors";
 
 dotenv.config();
 
@@ -23,6 +24,12 @@ const port = process.env.PORT || 3000;
 
 const app = express();
 
+app.use(
+  cors({
+    origin: "*",
+    credentials: true,
+  })
+);
 app.use(express.json());
 app.use(cookieParser());
 
