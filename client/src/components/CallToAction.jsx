@@ -23,7 +23,7 @@ export default function CallToAction() {
       </div>
       <div className="p-7 flex-1">
         <img
-          src="../../public/call_to_action.png"
+          src="/call_to_action.png"
           alt="js picture"
         />
       </div>
